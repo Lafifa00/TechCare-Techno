@@ -1320,7 +1320,7 @@ header {
 
 .consultation-eyebrow {
   display: inline-block;
-  color: #19d6c2;
+  color: #A78BFA;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 2px;
@@ -1418,8 +1418,8 @@ header {
 .consultation-fields input:focus,
 .consultation-fields select:focus,
 .consultation-fields textarea:focus {
-  border-color: #19d6c2;
-  box-shadow: 0 0 0 3px rgba(25,214,194,.09);
+  border-color: #A78BFA;
+  box-shadow: 0 0 0 3px rgba(167,139,250,.18);
 }
 
 .consultation-fields input::placeholder,
@@ -1523,7 +1523,7 @@ header {
 }
 
 .consultation-info-card h2 span {
-  color: #19d6c2;
+  color: #A78BFA;
 }
 
 .consultation-info-desc {
@@ -1546,19 +1546,6 @@ header {
   display: flex;
   align-items: flex-start;
   gap: 13px;
-}
-
-.benefit-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 38px;
-  height: 38px;
-  color: #19d6c2;
-  background: rgba(25,214,194,.1);
-  border-radius: 11px;
-  font-size: 18px;
 }
 
 .consultation-benefit h3 {
@@ -1793,7 +1780,7 @@ header {
 
 .products-eyebrow {
   display: inline-block;
-  color: #19d6c2;
+  color: #a855f7;;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 2px;
@@ -2011,7 +1998,7 @@ header {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: rgba(25, 214, 194, 0.1);
+  background: rgba(167, 139, 250, 0.15);
   transition:
     transform 0.25s ease,
     background 0.25s ease;
@@ -2019,7 +2006,7 @@ header {
 
 .product-card:hover .product-arrow {
   transform: translate(2px, -2px);
-  background: rgba(25, 214, 194, 0.2);
+  background: rgba(167, 139, 250, 0.25);
 }
 
 /* TABLET */
@@ -2115,8 +2102,8 @@ header {
 }
 
 [data-theme="light"] .product-image-placeholder {
-  background: rgba(25, 180, 165, 0.04);
-  border-color: rgba(25, 180, 165, 0.35);
+  background: rgba(139, 92, 246, 0.04);
+  border-color: rgba(139, 92, 246, 0.35);
 }
 
 [data-theme="light"] .product-image-placeholder strong {
@@ -2969,5 +2956,176 @@ header {
 
 [data-theme="light"] .tutorial-thumbnail {
   background: #f5f0fc;
+}
+
+/* =====================================
+   FIX PURPLE THEME - PRODUCT CATALOG
+===================================== */
+
+.products-view-all {
+  color: #A78BFA;
+}
+
+.product-card:hover {
+  border-color: rgba(167, 139, 250, 0.55);
+}
+
+.product-image-placeholder {
+  color: #A78BFA;
+  border-color: rgba(167, 139, 250, 0.45);
+  background: rgba(167, 139, 250, 0.07);
+}
+
+.product-card-footer {
+  color: #A78BFA;
+}
+
+.product-arrow {
+  background: rgba(167, 139, 250, 0.15);
+}
+
+.product-card:hover .product-arrow {
+  background: rgba(167, 139, 250, 0.25);
+}
+
+/* LIGHT MODE */
+[data-theme="light"] .product-image-placeholder {
+  color: #7C3AED;
+  border-color: rgba(139, 92, 246, 0.4);
+  background: rgba(139, 92, 246, 0.06);
+}
+
+
+/* FORCE PURPLE FORM FOCUS */
+.form input:focus,
+.form select:focus,
+.form textarea:focus,
+.form input:focus-visible,
+.form select:focus-visible,
+.form textarea:focus-visible {
+  border: 2px solid #A78BFA !important;
+  outline: none !important;
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.22) !important;
+  accent-color: #A78BFA !important;
+}
+
+/* PURPLE CHECKBOX AND RADIO */
+.form input[type="checkbox"],
+.form input[type="radio"] {
+  accent-color: #A78BFA !important;
+}
+
+/* KONSULTASI - PURPLE FORM FOCUS */
+.consultation-form input:focus,
+.consultation-form select:focus,
+.consultation-form textarea:focus,
+.consultation-form input:focus-visible,
+.consultation-form select:focus-visible,
+.consultation-form textarea:focus-visible {
+  border-color: #A78BFA !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.22) !important;
+  accent-color: #A78BFA !important;
+}
+
+.consultation-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.consultation-step {
+  position: relative;
+  padding: 24px;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 18px;
+  background: rgba(167, 139, 250, 0.04);
+}
+
+.consultation-step-number {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #6D4BC3;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.consultation-step h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.consultation-step p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #999;
+}
+
+@media (max-width: 700px) {
+  .consultation-steps {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+.consultation-flow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.flow-icon {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.flow-icon > span {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  z-index: 2;
+  font-size: 9px;
+  font-weight: 700;
+  color: #C4A7FF;
+}
+
+.flow-symbol {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: rgba(167, 139, 250, 0.12);
+  color: #A78BFA;
+}
+
+.flow-symbol svg {
+  width: 23px;
+  height: 23px;
+}
+
+.flow-line {
+  position: absolute;
+  left: 23px;
+  top: 50px;
+  height: 24px;
+  width: 1px;
+  background: rgba(167, 139, 250, 0.35);
+}
+
+.consultation-flow p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
 }
 

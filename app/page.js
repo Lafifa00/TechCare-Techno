@@ -196,10 +196,14 @@ export default async function Home() {
 </section>
 
    
+
+
 <section className="wrap process-section">
   <div className="process-heading">
     <span className="process-eyebrow">HOW IT WORKS</span>
+
     <h2>Dari bingung sampai siap live</h2>
+
     <p>
       Empat langkah sederhana untuk mewujudkan setup gaming
       dan streaming impianmu bersama TechCare.
@@ -211,44 +215,39 @@ export default async function Home() {
       {
         n: "01",
         title: "Konsultasi",
-        desc: "Isi form singkat atau chat WhatsApp untuk ceritakan kebutuhan setup-mu.",
-        icon: "💬"
+        desc: "Isi form singkat atau chat WhatsApp untuk ceritakan kebutuhan setup-mu."
       },
       {
         n: "02",
         title: "Rekomendasi",
-        desc: "Dapatkan daftar perangkat yang sesuai budget dan kebutuhan PC-mu.",
-        icon: "✦"
+        desc: "Dapatkan daftar perangkat yang sesuai budget dan kebutuhan PC-mu."
       },
       {
         n: "03",
         title: "Pesan",
-        desc: "Cek ketersediaan produk di katalog, lalu pesan melalui WhatsApp.",
-        icon: "🛒"
+        desc: "Cek ketersediaan produk di katalog, lalu pesan melalui WhatsApp."
       },
       {
         n: "04",
         title: "Pasang",
-        desc: "Rakit setup sendiri dengan panduan video atau gunakan bantuan tim kami.",
-        icon: "⚡"
+        desc: "Rakit setup sendiri dengan panduan video atau gunakan bantuan tim kami."
       }
     ].map((step) => (
       <div className="process-step" key={step.n}>
+
         <div className="process-marker">
           <span>{step.n}</span>
         </div>
 
         <div className="process-card">
-          <div className="process-card-icon">{step.icon}</div>
-          <span className="process-number">STEP {step.n}</span>
           <h3>{step.title}</h3>
           <p>{step.desc}</p>
         </div>
+
       </div>
     ))}
   </div>
 </section>
-
     
 <section className="wrap products-section">
   <div className="products-heading">

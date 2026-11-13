@@ -62,12 +62,11 @@ Catatan: ${f.catatan || "-"}`
           onSubmit={go}
         >
           <div className="consultation-form-heading">
-            <span>01</span>
-            <div>
-              <h2>Form Konsultasi</h2>
-              <p>Lengkapi informasi berikut.</p>
-            </div>
+          <div>
+            <h2>Form Konsultasi</h2>
+            <p>Lengkapi informasi berikut.</p>
           </div>
+        </div>
 
           <div className="consultation-fields">
 
@@ -95,12 +94,18 @@ Catatan: ${f.catatan || "-"}`
 
             <label>
               Budget
-              <input
+              <select
                 required
-                placeholder="Contoh: Rp2.000.000"
                 value={f.budget}
                 onChange={set("budget")}
-              />
+              >
+                <option value="">Pilih budget</option>
+                <option>Di bawah Rp1.000.000</option>
+                <option>Rp1.000.000 – Rp2.500.000</option>
+                <option>Rp2.500.000 – Rp5.000.000</option>
+                <option>Rp5.000.000 – Rp10.000.000</option>
+                <option>Di atas Rp10.000.000</option>
+              </select>
             </label>
 
             <label>
@@ -173,50 +178,62 @@ Catatan: ${f.catatan || "-"}`
             <div className="consultation-benefits">
 
               <div className="consultation-benefit">
-                <span className="benefit-icon">✦</span>
-                <div>
-                  <h3>Konsultasi Gratis</h3>
-                  <p>Diskusikan kebutuhan setup tanpa biaya konsultasi.</p>
-                </div>
+              <div>
+                <h3>Konsultasi Gratis</h3>
+                <p>Diskusikan kebutuhan setup tanpa biaya konsultasi.</p>
               </div>
+            </div>
 
               <div className="consultation-benefit">
-                <span className="benefit-icon">◈</span>
-                <div>
-                  <h3>Sesuai Budget</h3>
-                  <p>Rekomendasi perangkat berdasarkan anggaranmu.</p>
-                </div>
+              <div>
+                <h3>Sesuai Budget</h3>
+                <p>Rekomendasi perangkat berdasarkan anggaranmu.</p>
               </div>
+            </div>
 
               <div className="consultation-benefit">
-                <span className="benefit-icon">⌘</span>
-                <div>
-                  <h3>Setup Support</h3>
-                  <p>Bantuan untuk mewujudkan setup yang kamu inginkan.</p>
-                </div>
+              <div>
+                <h3>Setup Support</h3>
+                <p>Bantuan untuk mewujudkan setup yang kamu inginkan.</p>
               </div>
+            </div>
 
             </div>
           </div>
 
           <div className="consultation-contact-card">
-            <h3>Alur Konsultasi</h3>
+            
 
-            <div className="consultation-flow">
-              <span>01</span>
-              <p>Isi kebutuhan konsultasi</p>
-            </div>
+<h3>Alur Konsultasi</h3>
 
-            <div className="consultation-flow">
-              <span>02</span>
-              <p>Kirim formulir ke WhatsApp</p>
-            </div>
+<div className="consultation-flow">
+  <div className="flow-symbol">
+    <svg viewBox="0 0 24 24" fill="none">
+      <rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" strokeWidth="1.7"/>
+      <path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/>
+    </svg>
+  </div>
+  <p>Isi kebutuhan konsultasi</p>
+</div>
 
-            <div className="consultation-flow">
-              <span>03</span>
-              <p>Diskusikan rekomendasi bersama TechCare</p>
-            </div>
+<div className="consultation-flow">
+  <div className="flow-symbol">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M21 3L10.5 13.5M21 3l-6.7 18-3.8-7.5L3 9.7 21 3Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round"/>
+    </svg>
+  </div>
+  <p>Kirim formulir ke WhatsApp</p>
+</div>
 
+<div className="consultation-flow">
+  <div className="flow-symbol">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H11l-5 4v-4.2A2.5 2.5 0 0 1 4 13.5v-8Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round"/>
+      <path d="M8 8h8M8 11.5h5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/>
+    </svg>
+  </div>
+  <p>Diskusikan rekomendasi bersama TechCare</p>
+</div>
             <div className="consultation-contact-divider" />
 
             <h3>Hubungi Kami</h3>
@@ -225,7 +242,15 @@ Catatan: ${f.catatan || "-"}`
               className="consultation-contact-link"
               href="mailto:techcare.contact@gmail.com"
             >
-              <span className="contact-icon">✉</span>
+              <span className="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="5" width="18" height="14" rx="2"
+                  stroke="currentColor" strokeWidth="1.7"/>
+                <path d="m4 7 8 6 8-6"
+                  stroke="currentColor" strokeWidth="1.7"
+                  strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </span>
               <span>
                 <small>Email</small>
                 <strong>techcare.contact@gmail.com</strong>
@@ -239,7 +264,16 @@ Catatan: ${f.catatan || "-"}`
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="contact-icon">⌕</span>
+              <span className="contact-icon">
+  <svg viewBox="0 0 24 24" fill="none">
+    <path d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.2A8.5 8.5 0 1 1 20 11.5Z"
+      stroke="currentColor" strokeWidth="1.7"
+      strokeLinejoin="round"/>
+    <path d="M8 8.5c.5 3 2.5 5 5.5 6"
+      stroke="currentColor" strokeWidth="1.7"
+      strokeLinecap="round"/>
+  </svg>
+</span>
               <span>
                 <small>WhatsApp</small>
                 <strong>Hubungi Customer Service</strong>
