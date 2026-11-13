@@ -3129,3 +3129,125 @@ header {
   line-height: 1.5;
 }
 
+
+/* =========================================
+   TECHCARE - HOW IT WORKS PURPLE THEME
+========================================= */
+
+/* LABEL HOW IT WORKS */
+.process-eyebrow {
+  color: #A78BFA;
+}
+
+/* GARIS DASAR TIMELINE */
+.process-track::before {
+  background: linear-gradient(
+    90deg,
+    rgba(139, 92, 246, 0.25),
+    rgba(167, 139, 250, 0.45)
+  );
+}
+
+/* ANIMASI CAHAYA PADA GARIS */
+.process-track::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #8B5CF6,
+    #E9D5FF,
+    #A78BFA,
+    transparent
+  );
+
+  background-size: 200% 100%;
+  animation: timeline-glow 3s linear infinite;
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* GERAKAN CAHAYA */
+@keyframes timeline-glow {
+  from {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: -100% 0;
+  }
+}
+
+/* NOMOR TIMELINE */
+.process-marker {
+  background: #A78BFA;
+  color: #171022;
+
+  box-shadow:
+    0 0 12px rgba(139, 92, 246, 0.45),
+    0 0 25px rgba(139, 92, 246, 0.2);
+
+  border-color: #111015;
+}
+
+/* CARD */
+.process-card {
+  border-color: rgba(167, 139, 250, 0.13);
+  background: #1E1C25;
+}
+
+/* HOVER CARD */
+.process-card:hover {
+  border-color: rgba(167, 139, 250, 0.65);
+  background: #24202F;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(139, 92, 246, 0.1);
+}
+
+/* LIGHT MODE */
+[data-theme="light"] .process-eyebrow {
+  color: #7C3AED;
+}
+
+[data-theme="light"] .process-marker {
+  background: #8B5CF6;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+[data-theme="light"] .process-card {
+  border-color: rgba(139, 92, 246, 0.15);
+}
+
+[data-theme="light"] .process-card:hover {
+  border-color: #A78BFA;
+  background: #FAF7FF;
+}
+
+/* MOBILE DAN TABLET */
+@media (max-width: 900px) {
+  .process-track::after {
+    display: none;
+  }
+}
+
+/* AKSESIBILITAS ANIMASI */
+@media (prefers-reduced-motion: reduce) {
+  .process-track::after {
+    animation: none;
+  }
+
+  .process-card {
+    transition: none;
+  }
+}
