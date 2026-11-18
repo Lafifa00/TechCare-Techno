@@ -18,10 +18,11 @@ export default function ProductCard({ p }) {
       <div className="product-image">
         {p.gambar ? (
           <img
-            src={p.gambar}
-            alt={p.nama}
-            loading="lazy"
-          />
+          src={p.gambar}
+          alt={p.nama}
+          loading="lazy"
+          className="w-full h-full object-cover object-center"
+        />
         ) : (
           <div className="product-image-placeholder">
             <svg

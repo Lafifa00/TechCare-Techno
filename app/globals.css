@@ -1847,6 +1847,7 @@ header {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22);
 }
 
+
 /* PRODUCT IMAGE */
 
 .product-image {
@@ -1864,42 +1865,14 @@ header {
   display: block;
   width: 100%;
   height: 100%;
-  padding: 16px;
-  object-fit: contain;
+  padding: 0;
+  object-fit: cover;
+  object-position: center;
   transition: transform 0.4s ease;
 }
 
 .product-card:hover .product-image > img {
   transform: scale(1.06);
-}
-
-/* EMPTY IMAGE PLACEHOLDER */
-
-.product-image-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: calc(100% - 28px);
-  height: calc(100% - 28px);
-  padding: 15px;
-  border: 1px dashed rgba(25, 214, 194, 0.38);
-  border-radius: 12px;
-  color: #19d6c2;
-  text-align: center;
-  background: rgba(25, 214, 194, 0.035);
-}
-
-.product-image-placeholder strong {
-  color: #e8e6ef;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.product-image-placeholder span {
-  color: #9995a9;
-  font-size: 11px;
 }
 
 /* STOCK BADGE */
